@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+    <head>
+        <meta charset="utf-8"> <!--кодировку символов документаи-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My first website</title> <!--заголовок-->
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/fonts.css">
+        <link rel="stylesheet" type="text/css" href="css/blog.css">
+        <link rel="stylesheet" type="text/css" href="css/gallery.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap&subset=cyrillic" rel="stylesheet">
+        <!--ЛБ5 Подключение внешней библиотеки-->
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <!--Подключаем сценарии-->
+        <script src="js/script.js"></script>
+        <script src="js/popup.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/blog.js"></script>
+    </head>
+
+    <body>
+        <header> <!-- меню страницы-->
+            <nav id="myTopnav"> 
+              <img src="img/рисунок1.png" alt="Логотип сайта">
+                <ul class="menu">
+                  <!--#-пустая ссылка.  title- при наведении отображает как ссылку-->
+                  <!--data-link - Для плавного перехода (без-мгновенный)-->
+                    <li><a href="index.html" class="menu-element" data-link="top" title="Home"> Home </a></li> 
+                    <li><a href="#services" class="menu-element" data-link="services" title="About our services"> General </a></li>
+                    <li><a href="#portfolio" class="menu-element" data-link="portfolio" title="Photo gallery"> Our projects </a></li>
+                    <li><a href="#contact" class="menu-element" data-link="contact" title="Contact form"> Write us </a></li>
+                    <li><a href="contacts.html" class="menu-element" title="Contact information"> Contacts </a></li>
+                    <li><a href="blog.html" class="menu-element" title="Our blog"> Blog </a></li>
+                    <li><a href="gallery.html" class="menu-element" title="Gallery"> Gallery </a></li>                    
+                </ul>
+                <div id="hamburger" class="icon ">
+                  &#9776;
+                </div>
+            </nav>
+        </header>
+        
+        <main>    <!---- Основной контент ---->
+          <section id="top">
+            <img class="top-image"  src="img/backgrounds/01.jpg" alt="Обложка страницы">
+          </section>
+            <section class="services" id="services">    <!--Раздел-->
+                <h1> Our capabilities </h1>
+                <div class="delimiter"></div>
+                <p>Lorem ipsum dolor eius minima libero </p>
+                 <div class="services-container"> <!--внешний блок-->
+                  <div class="container-row">  <!--обертка-->
+
+                    <div class="row-item"> <!--элемент-->
+                      <img class="item.img" src="img/icon-1.png" alt="">
+                      <h2>Duis ante</h2>
+                      <p>Phasellus enim erat</p>
+                    </div>
+
+                    <div class="row-item"> <!--элемент-->
+                      <img class="item.img" src="img/icon-2.png" alt="">
+                      <h2>Duis ante</h2>
+                      <p>Phasellus enim erat</p>
+                    </div>
+
+                    <div class="row-item"> <!--элемент-->
+                      <img class="item.img" src="img/icon-3.png" alt="">
+                      <h2>Duis ante</h2>
+                      <p>Phasellus enim erat</p>
+                    </div>
+
+                    <div class="row-item"> <!--элемент-->
+                      <img class="item.img" src="img/icon-4.png" alt="">
+                      <h2>Duis ante</h2>
+                      <p>Phasellus enim erat</p>
+                    </div>
+
+                    <div class="row-item"> <!--элемент-->
+                      <img class="item.img" src="img/icon-5.png" alt="">
+                      <h2>Duis ante</h2>
+                      <p>Phasellus enim erat</p>
+                    </div>
+
+                    <div class="row-item"> <!--элемент-->
+                      <img class="item.img" src="img/icon-6.png" alt="">
+                      <h2>Duis ante</h2>
+                      <p>Phasellus enim erat</p>
+                    </div>
+                  </div>
+                </div>                
+            </section>
+
+
+          <!-- ЛБ3 -->    
+            
+            <!--Ещё одна секция(с кнопкой)-->
+            <section class="overlay">
+              <div class="black-back">
+              <h2 class="main-title"> Details </h2>
+              <div class="delimiter">
+              </div>
+              <p class="main-title-description">Aenean placerat in vulputate urna eu arcu, aliquam erat volutpat suspendisse potenti... </p>
+              <button class="common-button" type="button" name="button">FIND OUT</button>  
+            </div>
+            </section>
+
+            <!-- Вёрстка нового раздела -->
+            <section class="portfolio" id="portfolio"> <!--Id - якоря для переходов по клику-->
+              <h2 class="main-title">Our projects</h2>
+              <div class="delimiter"></div>
+              <p class="main-title-description">Lorem ipsum dolor sit amet</p>            
+              <!-- Portfolio container -->
+              <div class=portfolio-container> <!-- Без объединения в класс portfolio-container картинки будут отображаться каждая с новой строки -->
+                <div class="portfolio-item" style="background-image: url('img/portfolio/img16.jpg')" data-src="img/portfolio/img16.jpg"> 
+                  <div  class="description-container">
+                    <p class="portfolio-title">Lorum dolorum</p> 
+                    <p class="portfolio-description">
+                      Duis aute irure dolor in reprehenderit in voluptate vilit esse
+                      cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </div>
+                </div>            
+                <div class="portfolio-item" style="background-image: url('img/portfolio/img12.jpg')" data-src="img/portfolio/img12.jpg">
+                  <div class="description-container">
+                    <p class="portfolio-title">Lorum dolorum</p>
+                    <p        class="portfolio-description">
+                      Duis aute irure dolor  in reprehenderit in voluptate vilit esse
+                      cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </div>
+                </div>
+                <div class="portfolio-item" style="background-image: url('img/portfolio/img13.jpg')" data-src="img/portfolio/img13.jpg">
+                  <div class="description-container">
+                    <p class="portfolio-title">Lorum dolorum</p>
+                    <p class="portfolio-description">
+                      Duis aute irure dolor in reprehenderit in voluptate vilit esse
+                      cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </div>
+                </div>
+                <div class="portfolio-item" style="background-image: url('img/portfolio/img14.jpg')" data-src="img/portfolio/img14.jpg">
+                  <div class="description-container">
+                    <p class="portfolio-title">Lorum dolorum</p>
+                    <p class="portfolio-description">
+                      Duis aute irure dolor in reprehenderit in voluptate vilit esse
+                      cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </div>
+                </div>
+                <div class="portfolio-item" style="background-image: url('img/portfolio/img15.jpg')" data-src="img/portfolio/img15.jpg">
+                  <div class="description-container">
+                    <p   class="portfolio-title">Lorum dolorum</p>
+                    <p class="portfolio-description">
+                      Duis aute irure dolor in reprehenderit in voluptate vilit esse
+                      cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </div>
+                </div>
+                <div class="portfolio-item" style="background-image: url('img/portfolio/img10.jpg')" data-src="img/portfolio/img10.jpg">
+                  <div class="description-container">
+                    <p class="portfolio-title">Lorum dolorum</p>
+                    <p class="portfolio-description">
+                      Duis aute irure dolor   in reprehenderit in voluptate vilit esse
+                      cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section> 
+          <!-- ЛБ3 -->
+
+
+
+          <!-- ЛБ4 -->
+
+          <!-- Секция с контактной формой, где пользователь может отправить сообщение через сайт. -->
+            <section class="contact" id="contact"> 
+              <h2 class="main-title">Contact form</h2>
+              <div class="delimiter"></div>
+              <p class="main-title-description">We are glad to answer any question</p>
+              <form id="contactform" method="post" action="contact.php" class="contact-form">
+                <input name="name" type="text" class="col" placeholder="Your name: *" required>
+                <input name="email" type="email" class="col" placeholder="E-mail: *" required>
+                <input name="theme" type="text" class="col" placeholder="Message subject: ">
+                <input name="phone" type="tel" class="col" placeholder="Phone number:  ">
+                <textarea name="comment" class="row-col" placeholder="Message: *" required></textarea>
+                <!--Поле с флажком и подписью -->
+                <span class="row-col check">
+                  <input id="accept" type="checkbox" class="" required>
+                  <label for="accept">I have read and accept the terms and conditions of the
+                    <a href="#">User agreement</a></label>
+                </span>
+                <!--Кнопка-->
+                <input type="submit" id="submit" class="submit btn" value="SEND">
+              </form>                           
+            </section>
+            <!-- ЛБ4 -->
+
+
+            <!-- ЛБ5 -->
+            <!-- Секция с отзывами -->
+            <section class="testimonials">
+              <h1 class="main-title">Comments</h1>
+              <div class="delimiter"></div>
+              <p class="main-title-description">Our client feedback </p>
+              <!-- Внешний блок -->
+              <div class="testimonials-container">
+                <!-- Обёртка -->
+                <div class="testimonials-inner">
+                  <!-- Элемент 1-->
+                  <div class="testimonials-card">
+                    <div class="card-row">
+                      <img class="card-img" src="img/testimonials/01.jpg" alt="">
+                      <div class="card-head">
+                        <h4>Angelina Glory</h4>
+                        <span>25/02/2022</span>
+                      </div>
+                    </div>
+                    <p>Goudaf dajui foisd amosudo poyid weofdo gad yuir toim amosura gadifa</p>
+                  </div>
+                  <!-- Элемент 2-->
+                  <div class="testimonials-card">
+                    <div class="card-row">
+                      <img class="card-img" src="img/testimonials/02.jpg" alt="">
+                      <div class="card-head">
+                        <h4>Sergey Brin</h4>
+                        <span>05/09/2022</span>
+                      </div>
+                    </div>
+                    <p>Out tarom moj youpa ryl boi reainom lout nig houte orava moiut ariogn georruinb nayuh foiso kurado maihg etor</p>
+                  </div>
+                  <!-- Элемент 3-->
+                  <div class="testimonials-card">
+                    <div class="card-row">
+                      <img class="card-img" src="img/testimonials/03.jpg" alt="">
+                      <div class="card-head">
+                        <h4>Oleg Milush</h4>
+                        <span>17/03/2022</span>
+                      </div>
+                    </div> 
+                    <p>Pfiy ieros meauro koutera mioq rauitwz loidds novam requireg lokfa suratma ihrova weramoisha kioera ouyeonf juyreaw </p>
+                  </div>
+                  <!-- Элемент 4-->
+                  <div class="testimonials-card">
+                    <div class="card-row">
+                      <img class="card-img" src="img/testimonials/04.jpg" alt="">
+                      <div class="card-head">
+                        <h4>Alina Malayeva</h4>
+                        <span>27/04/2022</span>
+                      </div>
+                    </div>
+                    <p>Untro soy retna gat rewqs dafikula moise forayma lovabne mitro akia jouba loka wear </p>
+                  </div>
+                  <!-- Элемент 5-->
+                  <div class="testimonials-card">
+                    <div class="card-row">
+                      <img class="card-img" src="img/testimonials/05.jpg" alt="">
+                      <div class="card-head">
+                        <h4>John Smith</h4>
+                        <span>13/07/2022</span>
+                      </div>
+                    </div>
+                    <p>Porda fgeq woikf koiur lourenbman liutera jhuitlo afoprea kyuropaso monuav lovearj lga monvare noisre malofv aprourert houtemnb fasr </p>
+                  </div>
+                  <!-- Элемент 6-->
+                  <div class="testimonials-card">
+                    <div class="card-row">
+                      <img class="card-img" src="img/testimonials/06.jpg" alt="">
+                      <div class="card-head">
+                        <h4>Nastya Lotera</h4>
+                        <span>10/10/2022</span>
+                      </div>
+                    </div>
+                    <p>Utoq yremaf lorga bolivarea poere juyre loman uyeva cano laveliytaalm gjestalto yehf ngetyug wereroiom mjaoir deska malovaryu poiifgh maofa reawqp moiudaw wero</p>
+                  </div>
+                </div>
+                <!-- Кнопки -->
+                <div class="testimonials-controls">
+                  <div class="control-item active"></div>
+                  <div class="control-item"></div>
+                  <div class="control-item"></div>
+                </div>  
+              </div>
+            </section>
+            <!-- ЛБ5 -->
+        </main>
+
+          <!-- ЛБ4 -->
+            <!---- Подвал страницы/ нижний колонтитул ---->
+            <footer>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="index.html" class="menu-element" data-link="top" title="Home"> Home </a>
+                  </li> 
+                  <li>
+                    <a href="#services" class="menu-element" data-link="services" title="About our services"> General </a>
+                  </li>
+                  <li>
+                    <a href="#portfolio" class="menu-element" data-link="portfolio" title="Photo gallery"> Our works </a>
+                  </li>
+                  <li>
+                    <a href="#contact" class="menu-element" data-link="contact" title="Contact form"> Write us </a>
+                  </li>
+                  <li>
+                    <a href="contacts.html" class="menu-element" title="Contact information"> Contacts </a>
+                  </li>
+                  <li>
+                    <a href="blog.html" class="menu-element" title="Our blog"> Blog </a>
+                  </li>
+                  <li>
+                    <a href="gallery.html" class="menu-element" title="Gallery"> Gallery </a>
+                  </li>
+                </ul>
+              </nav>
+            <!--Бренд(логотип) сайта-->
+            <div class="brand">
+              <img src="img/fort-icon.png" alt="Website logo">
+              <span>AWESOME</span>
+              </div>
+              <!--Социальные иконки в подвале сайта-->
+              <div class="social">
+                <a href="#" title="Facebook" target="_blank">
+                  <img class="social-ing" src="img/social/001-facebook.png" alt="Facebook">
+                </a>
+                <a href="#" title="LinkedIn" target="_blank">
+                  <img class="social-ing" src="img/social/004-linkedin.png" alt="LinkedIn">
+                </a>
+                <a href="#" title="Instagram" target="_blank">
+                  <img class="social-ing" src="img/social/005-instagram.png" alt="Instagram">
+                </a>
+                <a href="#" title="Twitter" target="_blank">
+                  <img class="social-ing" src="img/social/007-twitter.png" alt="Twitter">
+                </a>
+                <a href="#" title="Tumblr" target="_blank">
+                  <img class="social-ing" src="img/social/010-tumblr.png" alt="Tumblr">
+                </a>
+              </div>             
+              <div class="copyright">© Very First Page 2022></div>
+        </footer>
+                   
+        <!-- ЛБ4 -->
+
+    </body>
+</html>
