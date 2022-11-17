@@ -56,7 +56,7 @@ function slideTestimonials(item) {
     const index = $('.control-item').index(clicked);
       // Измеряем ширину карточки вместе с margin -ключ true
     const width = $('.testimonials-card').outerWidth(true);
-      // Измеряем необходимое для пролистыывания расстояяние и применяем к блоку обёртке
+      // Измеряем необходимое для пролистывания расстояние и применяем к блоку обёртке
     const scroll = width * 2 * index;
     $('.testimonials-inner').css('transform', 'translateX(-'+ scroll +'px)');
 

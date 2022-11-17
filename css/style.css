@@ -18,7 +18,7 @@
  header nav {  /*меню*/
   display: flex; /*в дальнейщем позволит управлять блоками - предметы располагаются вдоль главной оси */
   justify-content: space-between; /*выравнивание дочерних элементов по горизонтали с одинаковыми отступами между ними*/
-  max-width: 960px; /*ограничение максимальной ширины блока margin:auto*/
+  max-width: 950px; /*ограничение максимальной ширины блока margin:auto*/
   margin: auto; /* внешние отступы */
   padding: 0 30px; /* внутренняя забивка блока*/
  }
@@ -45,14 +45,14 @@
   justify-content: flex-end; /* выравнивание дочерних элементов по горизонтали к правому краю блока*/
   align-items: center; /* +++++++выравнивание дочерних элементов по вертикали по центру */    
   flex: 1; /* установка единой ширины для блока*/
+  margin: auto;
  }
 
  header li {
   display: inline-block; /* ++++++++создание блока с двойственным поведением- убираются точки*/
-  padding: 15px 25px; /* внутренний отступ блока- слова разделились с помощью 25*/
+  padding: 15px 22px; /* внутренний отступ блока- слова разделились с помощью 25*/
   color: #ffffff; /* цвет текста*/
- }
- 
+ } 
 
  .top-image { 
   width: 100%; /* картинка под все окно браузера*/
@@ -273,7 +273,7 @@
  }
 
  .row-item img{
-  width: 90%;
+  width: 48%;
   opacity: 0.75;
  }
 
@@ -282,145 +282,53 @@
   font-size: 26px;
   margin: 8px 0;
  }
+ .row-item img:hover{
+  width: 57%;
+  cursor: pointer;
+ }
 
-
-/*-----ЛБ3*/
  .icon {
   display: none;
  }
 
- @media screen and (max-width: 992px) {
-  .row-item {
-    width: 45%;
-  }
-  .portfolio-item {
-    width: 50%;
-  }
-  header nav li {
-    display: none;
-    padding: 15px 0;
-  }   /*--ЛБ4 - Стили меню для мобильных диагоналей*/
-  header ul { 
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: #2d2f31;
-    height: 0px;
-    top: 57px;
-    transition: all 250ms ease-in-out;
-    flex-direction: column;
-  } 
-  .responsive ul {
-    height: 200px;
-  }
-  .responsive li {
-    display: inline-block;
-  }   /*ЛБ4-- */
-  .about-container { /*--ЛБ6 | Мобильные стили*/
-    max-width: 450px;
-  }
-  .achievement-row { /*Стили для "Наши достижения"*/
-    flex-direction: column;
-    padding: 40px 0;
-  }
-  .achievement-column {
-    width: 100%;
-  }
-  .single-achievement {
-    margin: 20px 0;
-  }
-  .counter {
-    font-size: 32px;
-  }
-  .about-row {
-    flex-direction: column;
-  }
-  .about-column {
-    width: 100%;
-  }
-  .content-left {
-    margin-bottom: 25px;
-  }
-  /*Стили отзывов для мобильных*/
-  .testimonials {
-    margin: 80px 0;
-  }
-  .testimonials-container {
-    max-width: 760px;
-  }
-  .testimonials-card {
-    width: 350px;
-  }
-  /*ЛБ6--*/
- }
-
- @media screen and (max-width: 768px) {
-  .container-row {
-    flex-direction: column;
-  }
-  /*Для настройки адаптивности*/
-  .row-item {
-    width: unset;
-  }
-  .icon {
-    display: flex;
-    margin: auto 0;
-    color: white;
-    padding: 5px 10px;
-    cursor: pointer;
-    border: 1px solid white;
-    border-radius: 4px;
-    font-size: 20px; 
-  }
-  /*--ЛБ6* | Стили отзывов для мобильных */
-  .testimonials-container {
-    max-width: 550px;
-  }
-  .testimonials-card {
-    width: 250px;
-  }
-  /*ЛБ6--*/
- }
- /*Для портретной ориентации смартфонов */
- @media screen and (max-width: 576px) {
-  .portfolio-item { width: 100%; } 
-  /* --ЛБ4 Стили формы для мобильных устройств: */
-  .contact-form .col:nth-child(odd) {
-    border: 1px solid #afafaf;
-  }
-  .contact-form .col {
-    width: 100%;
-    margin-bottom: 15px;
-  }
-  .contact-form .submit {
-    font-size: 14px;
-  }
-  /* ЛБ4-- */
-  /*--ЛБ6* | Стили отзывов для мобильных */
-  .testimonials-container {
-    max-width: 100%;
-    padding: 0 15px;
-  }
-  .testimonials-inner {
-    transform: translateX(0px) !important;
-    flex-direction: column;
-  }
-  .testimonials-card {
-    width: auto;
-  }
-  .testimonials-controls {
-    display: none;
-  }
-  /*ЛБ6--*/
-}
-/*ЛБ3-----*/
-
 /*-----ЛБ4*/
 /*Стили для подвала сайта*/
  footer {
-   background-image: url("../img/backgrounds/16.jpg");
-   padding-bottom: 10px;
- } 
+  background-image: url("../img/backgrounds/16.jpg");
+  padding-bottom: 10px;
+ }  
+
+ footer nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 950px;
+  margin: auto;
+  padding: 0 30px;
+ }
+
+ footer ul {
+  font-family: "Roboto", "OpenSans-Light", Helvetica, Arial, sans-serif;
+  font-weight: 300;   /* жирность текста*/  
+  display: flex;     /* создание контейнера flexbox- данные уходят по гориз. по порядку*/
+  justify-content: center; /*Выравнивание по центру*/
+  flex: 1; /* установка единой ширины для блока*/
+  margin: 0 auto;
+ }
+
+ footer li {
+  display: inline-block; /* ++++++++создание блока с двойственным поведением- убираются точки*/
+  padding: 15px 25px;
+ }
+ footer nav a {
+  color: #ffffff;
+ }
+ footer nav a:hover { /* поведение элемента, когда курсор над ним*/
+  color: rgb(76, 239, 125)
+ }
+
+
+ /*Бренд сайта*/
  .brand {
   display: flex;
   justify-content: center;
@@ -454,49 +362,7 @@
    text-align: center;
    color: white;
  }
- /*Mножественные селекторы в CSS для набора стилей*/
- header nav,
- footer nav {
-  display: flex;
-  justify-content: space-between;
-  max-width: auto;
-  margin: auto;
-  padding: 0 15px;
- }
 
- header ul,
-footer ul{
-  display: flex;
-  justify-content: space-between;
-  max-width: auto;
-  margin: auto;
-  padding: 0 15px;
-}
-
-header li,
-footer li{
-  display: flex;
-  justify-content: space-between;
-  max-width: auto;
-  margin: auto;
-  padding: 0 15px;
-}
-header nav a,
-footer nav a{
-  display: flex;
-  justify-content: space-between;
-  max-width: auto;
-  margin: auto;
-  padding: 0 15px;
-}
-header nav:hover,
-footer nav:hover{
-  display: flex;
-  justify-content: space-between;
-  max-width: auto;
-  margin: auto;
-  padding: 0 15px;
-}
 .footer ul {
  justify-content: center;
 }
@@ -669,3 +535,139 @@ footer nav:hover{
     margin: 50px;
   }
 /*ЛБ6-----*/
+
+/*ЛБ8*/
+.Shop-name {
+  text-align: center;
+  margin: 15px;
+}
+
+/*ЛБ8*/
+
+/*-----ЛБ3 АДАПТАЦИИ ДЛЯ ДРУГИХ УСТРОЙСТВ*/
+@media screen and (max-width: 992px) {
+  .achievement-container {
+    max-width: 100%;
+  }
+  .achievement-row { 
+    flex-direction: column;
+    padding: 40px 0;
+  }
+  .achievement-column {
+    width: 100%;
+  }
+  .single-achievement {
+    margin: 20px 0;
+  }
+  .counter {
+    font-size: 32px;
+  }
+  .about-container {
+    max-width: 450px;
+  }
+  .about-row {
+    flex-direction: column;
+  }
+  .about-column {
+    width: 100%;
+  }
+  .content-left {
+    margin-bottom: 25px;
+  }
+  .testimonials {
+    margin: 80px 0;
+  }
+  .testimonials-container {
+    max-width: 760px;
+  }
+  .testimonials-card {
+    width: 350px;
+  }
+  .portfolio-item {
+    width: 50%;
+  }
+  .row-item {
+    width: 45%;
+  }
+  .icon {
+    display: flex;
+    margin: auto 0;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 4px;
+    font-size: 20px;
+  }
+  header nav li {
+    display: none;
+    padding: 15px 0;
+  }  
+  header ul { 
+    position: absolute;
+    left: 0;
+    right: 0;
+    background: #2d2f31;
+    height: 0px;
+    top: 57px;
+    transition: all 250ms ease-in-out;
+    flex-direction: column;
+  } 
+  .responsive ul {
+    height: 200px;
+  }
+  .responsive li {
+    display: inline-block;    
+  }   
+  footer nav ul { 
+   flex-direction: column;
+  }
+  .brand {
+   margin-top: 15px;
+  }
+ }
+
+ @media screen and (max-width: 768px) {  
+  .testimonials-container {
+    max-width: 550px;
+  }
+  .testimonials-card {
+    width: 250px;
+  } 
+  .container-row {
+    flex-direction: column;
+  } 
+  .row-item {
+    width: unset;
+  }
+ }
+
+ @media screen and (max-width: 576px) {
+  .testimonials-container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+  .testimonials-inner {
+    transform: translateX(0px) !important;
+    flex-direction: column;
+  }
+  .testimonials-card {
+    width: auto;
+  }
+  .testimonials-controls {
+    display: none;
+  }
+ 
+  .portfolio-item { width: 100%; } 
+  
+  .contact-form .col:nth-child(odd) {
+    border: 1px solid #afafaf;
+  }
+  .contact-form .col {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+  .contact-form .submit {
+    font-size: 14px;
+  }
+}
